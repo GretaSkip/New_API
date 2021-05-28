@@ -1,12 +1,13 @@
 axios.get('https://pokeapi.co/api/v2/pokemon/ditto')
     .then(function(response) {
         console.log(response.data);
-        document.getElementById(list)=showText.response.data;
+        document.getElementById('list').innerHTML = showText(response.data);
 
     })
     .catch(function(error) {
         console.log(error);
     });
+
 
 
     function showText(data) {
@@ -33,7 +34,7 @@ axios.get('https://pokeapi.co/api/v2/pokemon/ditto')
                 }
                 return HTML;
             }
-        
+      
 
     
 
